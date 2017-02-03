@@ -1,13 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Hello } from './hello';
-import { ToggleSpinner } from './composite';
+import { App } from './app';
 
 ReactDOM.render(
-	<div>
-		<Hello compiler="Typescript" />
-		<ToggleSpinner />
-	</div>,
+	<App />,
 	document.getElementById('container')
 );
