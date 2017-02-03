@@ -1,0 +1,36 @@
+{
+  "name": "react-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/react": "^15.0.6",
+    "@types/react-dom": "^0.14.22",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "css-loader": "0.25.0",
+    "express": "^4.14.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "html-webpack-plugin": "2.22.0",
+    "npm-run-all": "3.1.1",
+    "open": "0.0.5",
+    "source-map-loader": "^0.1.6",
+    "style-loader": "0.13.1",
+    "typescript": "^2.1.5",
+    "webpack": "^2.1.0-beta.21",
+    "webpack-dev-middleware": "1.8.4",
+    "webpack-dev-server": "^2.1.0-beta.8",
+    "webpack-hot-middleware": "2.13.0",
+    "webpack-md5-hash": "0.0.5"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.dev.js --inline --hot --open",
+    "open:source": "babel-node buildScripts/sourceServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Graber",
+  "license": "ISC"
+}
