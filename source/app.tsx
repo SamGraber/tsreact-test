@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Hello } from './hello';
 import { Button, ButtonLink } from './button';
 import { Parent } from './parent';
+import { Card, Header, Body, Footer } from './card';
 import { ToggleSpinner } from './toggleSpinner';
 import { state$ } from './model';
 
@@ -29,6 +30,11 @@ export class App extends React.Component<any, any> {
 				<span>#3</span>
 				<b>#4</b>
 			</Parent>
+			<Card>
+				<Header>Header</Header>
+				<Body>Body</Body>
+				<Footer>Footer</Footer>
+			</Card>
 		</div>);
 	}
 }
