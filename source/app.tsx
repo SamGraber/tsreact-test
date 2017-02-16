@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { Hello } from './hello';
 import { Button, ButtonLink } from './button';
+import { Parent } from './parent';
 import { ToggleSpinner } from './toggleSpinner';
 import { state$ } from './model';
 
@@ -22,6 +23,12 @@ export class App extends React.Component<any, any> {
 			<ButtonLink link="http://google.com" newTab={true}>Link button</ButtonLink>
 			<ButtonLink type="primary flat" size="lg" link="http://google.com">Large primary link button</ButtonLink>
 			<ButtonLink disabled={true} link="http://google.com">Disabled link button</ButtonLink>
+			<Parent>
+				<span>#1</span>
+				<em>#2</em>
+				<span>#3</span>
+				<b>#4</b>
+			</Parent>
 		</div>);
 	}
 }
