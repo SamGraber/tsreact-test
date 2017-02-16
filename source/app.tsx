@@ -4,6 +4,7 @@ import { Hello } from './hello';
 import { Button, ButtonLink } from './button';
 import { Parent } from './parent';
 import { Card, Header, Body, Footer } from './card';
+import { List } from './list';
 import { ToggleSpinner } from './toggleSpinner';
 import { state$ } from './model';
 
@@ -35,6 +36,8 @@ export class App extends React.Component<any, any> {
 				<Body>Body</Body>
 				<Footer>Footer</Footer>
 			</Card>
+			<List list={[1, 2, 3]}
+				  template={num => <em>Item #{num}</em>}></List>
 		</div>);
 	}
 }
