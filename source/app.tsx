@@ -39,6 +39,7 @@ export class App extends React.Component<any, any> {
 					Inner area
 				</div>
 			</div>
+			<div {...{ onClick: () => console.log('Spread click'), className: 'spread' }}>Spread test</div>
 		</div>);
 	}
 }
