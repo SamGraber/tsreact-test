@@ -5,6 +5,7 @@ import { Button, ButtonLink } from './button';
 import { Parent } from './parent';
 import { Card, Header, Body, Footer } from './card';
 import { List } from './list';
+import { stopPropagation } from './events';
 import { ToggleSpinner } from './toggleSpinner';
 import { state$ } from './model';
 
@@ -38,6 +39,18 @@ export class App extends React.Component<any, any> {
 			</Card>
 			<List list={[1, 2, 3]}
 				  template={num => <em>Item #{num}</em>}></List>
+			<div onClick={() => console.log('Click propagated')}>
+				Outer area
+				<div>
+					Inner area
+				</div>
+			</div>
+			<div onClick={() => console.log('Click propagated')}>
+				Outer area (stop propagation)
+				<div onClick={stopPropagation(() => console.log('Stopped click'))}>
+					Inner area
+				</div>
+			</div>
 		</div>);
 	}
 }
